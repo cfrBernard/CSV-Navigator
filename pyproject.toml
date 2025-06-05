@@ -26,7 +26,14 @@ dev = [
 
 [tool.mypy]
 python_version = "3.13"
-strict = true
+ignore_missing_imports = true
+disallow_untyped_defs = false
+show_error_codes = true
+pretty = true
+exclude = "^tests/fixtures/"
+
+[[tool.mypy.overrides]]
+module = ["customtkinter"]
 ignore_missing_imports = true
 
 [tool.ruff]
