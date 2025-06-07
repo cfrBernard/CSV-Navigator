@@ -14,13 +14,13 @@ class MainApp(ctk.CTk):
         self.minsize(900, 600)
 
         # Layout : sidebar | main
-        self.grid_columnconfigure(0, weight=0)
-        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=10)
         self.grid_rowconfigure(0, weight=1)
 
         # Sidebar
         self.sidebar = SidebarView(self)
-        self.sidebar.grid(row=0, column=0, sticky="ns", padx=0, pady=5)
+        self.sidebar.grid(row=0, column=0, sticky="nsew", padx=0, pady=5)
 
         # Main section : TableView + StatsView
         main_frame = ctk.CTkFrame(self, corner_radius=0)
