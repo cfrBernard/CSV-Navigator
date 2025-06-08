@@ -1,6 +1,6 @@
 import customtkinter as ctk
 
-from .sidebar.import_tool import ImportTool
+from ..components.sidebar.import_tool import ImportTool
 
 
 class SidebarView(ctk.CTkFrame):
