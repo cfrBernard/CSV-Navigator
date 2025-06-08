@@ -1,8 +1,8 @@
 import customtkinter as ctk
 
-from .views.sidebar_view import SidebarView
-from .views.stats_view import StatsView
-from .views.table_view import TableView
+from .gui.views.sidebar_view import SidebarView
+from .gui.views.stats_view import StatsView
+from .gui.views.table_view import TableView
 
 
 class MainApp(ctk.CTk):

@@ -1,11 +1,15 @@
 import customtkinter as ctk
 
-from app.gui.app import MainApp
+from app.core.controller import AppController
 
-if __name__ == "__main__":
 
+def main():
     ctk.set_appearance_mode("Dark")
     ctk.set_default_color_theme("blue")
 
-    app = MainApp()
-    app.mainloop()
+    controller = AppController()
+    controller.run()
+
+
+if __name__ == "__main__":
+    main()
