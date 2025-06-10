@@ -14,7 +14,7 @@ class MainApp(ctk.CTk):
         self.minsize(900, 600)
 
         # Layout : sidebar | main
-        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=0, minsize=250)
         self.grid_columnconfigure(1, weight=10)
         self.grid_rowconfigure(0, weight=1)
 
@@ -24,7 +24,7 @@ class MainApp(ctk.CTk):
 
         # Main section : TableView + StatsView
         main_frame = ctk.CTkFrame(self, corner_radius=0)
-        main_frame.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
+        main_frame.grid(row=0, column=1, sticky="nsew", padx=(5, 0), pady=0)
         main_frame.grid_rowconfigure(0, weight=1)
         main_frame.grid_rowconfigure(1, weight=0)
         main_frame.grid_columnconfigure(0, weight=1)
