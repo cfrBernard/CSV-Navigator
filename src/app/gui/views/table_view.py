@@ -59,23 +59,21 @@ class TableView(ctk.CTkFrame):
         control_frame = ctk.CTkFrame(container, fg_color="transparent")
         control_frame.grid(row=1, column=0, columnspan=2, sticky="ew", pady=5, padx=10)
 
-        self.search_entry = ctk.CTkEntry(
-            control_frame, placeholder_text="🔍 Rechercher...", width=200
-        )
+        self.search_entry = ctk.CTkEntry(control_frame, placeholder_text="🔍 Search...", width=200)
         self.search_entry.pack(side="left", padx=5)
         self.search_entry.bind("<Return>", self.search)
 
         reset_btn = ctk.CTkButton(control_frame, text="↻ Reset", width=60, command=self.reset_view)
         reset_btn.pack(side="left", padx=5)
 
-        self.prev_btn = ctk.CTkButton(control_frame, text="◀", width=30, command=self.prev_page)
-        self.prev_btn.pack(side="right", padx=2)
+        self.next_btn = ctk.CTkButton(control_frame, text="▶", width=30, command=self.next_page)
+        self.next_btn.pack(side="right", padx=2)
 
         self.page_label = ctk.CTkLabel(control_frame, text="Page 1")
         self.page_label.pack(side="right", padx=5)
 
-        self.next_btn = ctk.CTkButton(control_frame, text="▶", width=30, command=self.next_page)
-        self.next_btn.pack(side="right", padx=2)
+        self.prev_btn = ctk.CTkButton(control_frame, text="◀", width=30, command=self.prev_page)
+        self.prev_btn.pack(side="right", padx=2)
 
     def update_table(self, df: pd.DataFrame):
         self.df = df.copy()
