@@ -2,8 +2,8 @@
 
 A lightweight Python interface for exploring CSV files with filtering, statistics, and visualizations. Perfect for quick data inspection and analysis.
 
-![Version](https://img.shields.io/badge/version-v0.0.0-blue)
-![License](https://img.shields.io/github/license/cfrBernard/CSV-Navigator)
+[![Version](https://img.shields.io/badge/version-v0.0.0-blue)](https://github.com/cfrBernard/CSV-Navigator/releases)
+[![License](https://img.shields.io/github/license/cfrBernard/CSV-Navigator)](./LICENSE.md)
 
 ## Features:
 
